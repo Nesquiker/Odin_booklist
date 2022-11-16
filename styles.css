@@ -1,0 +1,184 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto Light", sans-serif;
+}
+
+#hidden_form {
+    display: none;
+}
+
+input:hover {
+    border: 2px solid forestgreen;
+}
+
+input:invalid {
+    border: 2px solid darkred;
+}
+
+button:hover {
+    border: 5px solid dodgerblue;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    background-color: antiquewhite;
+    grid-template: 100px repeat(auto-fit, minmax(300px, 1fr))/ 1fr;
+}
+
+/* Header starts here */
+
+.header {
+    grid-area: 1 / 1 / 2 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rosybrown;
+    gap: 10px;
+    padding: 15px;
+}
+
+.header > * {
+    flex: 1;
+    font-weight: bolder;
+}
+
+.header > button {
+}
+
+.header > button {
+    font-size: 16px;
+    background-color: lightsalmon;
+    border-radius: 12px;
+    border: 1px solid goldenrod;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* Form Starts Here */
+
+.form_container {
+    display: grid;
+    grid-area: 2 / 1 / 3 / 3;
+    grid-template: 50px minmax(50px, 1fr) / 1fr;
+    padding: 10px;
+}
+
+.form_container h2 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.form_container .input_container {
+    grid-area: 2 / 1/ 3/ 2;
+    display: grid;
+    grid-template: repeat(auto-fit, minmax(50px, 1fr)) / repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+
+}
+
+.input_container > * {
+    display: flex;
+    border: 2px solid rosybrown;
+    border-radius: 20px;
+    font-weight: bolder;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.input_container > * > * {
+    flex: auto;
+    gap: 10px;
+    margin: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.input_container > * > label {
+    margin: 0;
+    justify-self: flex-end;
+    padding: 0;
+}
+.input_container > .read_in > input {
+    margin: 0;
+}
+
+.input_container > .buttons > button {
+    background-color: lightsalmon;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 5px;
+    justify-self: center;
+    border: 2px solid rosybrown;
+    text-align: center;
+    align-self: center;
+}
+
+/* Library starts here */
+
+.library_items {
+    grid-area: 3 / 1 / 4 / 3;
+    background-color: burlywood;
+    display: grid;
+    grid-template: 1fr / repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.library_items > * {
+    border: 10px solid rosybrown;
+    display: grid;
+    grid-template: 30px 1fr / 1fr;
+}
+
+h2 {
+    text-align: center;
+    border-bottom: 1px
+}
+
+.unfinished_book_cards, .finished_book_cards {
+    display: grid;
+    background-color: burlywood;
+    grid-template: repeat(auto-fit, 200px) / repeat(auto-fit, 250px);
+    gap: 15px;
+}
+
+.card {
+    display: flex;
+    border: 2px solid goldenrod;
+    border-radius: 18px;
+    flex-direction: column;
+    background-color: saddlebrown;
+    color: whitesmoke;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 5px 10px midnightblue;
+}
+
+.card > * {
+    flex: auto;
+}
+
+.card > h3 {
+
+}
+
+.card_button {
+    display: flex;
+    gap: 15px;
+}
+
+.card_button > button {
+    background-color: dimgrey;
+    border: 2px solid goldenrod;
+    border-radius: 8px;
+    height: 50px;
+    color: whitesmoke;
+    flex: auto;
+    padding: 5px;
+}
+
